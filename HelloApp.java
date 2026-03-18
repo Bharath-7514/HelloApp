@@ -4,13 +4,9 @@ public class HelloApp {
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } else {
-            String result = "";
-            for (String name : args) {
-                result += name + ", ";
-            }
-            result = result.substring(0, result.length() - 2);
+            String names = String.join(", ", args);
 
-            System.out.println("Hello, " + result + "!");
+            System.out.println("Hello, " + names + "!");
         }
     }
 }
